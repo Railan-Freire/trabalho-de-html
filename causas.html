@@ -12,6 +12,21 @@
             background-color: #f8d7da;
             transition: background-color 0.5s;
         }
+        .parallax-banner {
+            height: 300px;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(240, 240, 240);
+            text-shadow: #333;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -25,10 +40,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">O Problema</a>
+                    <a class="nav-link" href="index.html">PROBLEMA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Causas</a>
+                    <a class="nav-link" href="impactos.html">IMPACTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="causas.html">CAUSAS</a>
                 </li>
             </ul>
         </div>
@@ -51,7 +69,7 @@
             <li><strong>Fatores Econômicos:</strong> A falta de alternativas sustentáveis leva pequenos agricultores a usarem queimadas para manejo da terra. A falta de recursos para métodos mais sustentáveis agrava o problema.</li>
             <li><strong>Impunidade e Falta de Fiscalização:</strong> A ausência de medidas eficazes para combater queimadas ilegais e a impunidade permitem que a prática continue.</li>
         </ul>
-        <a href="impactos.html">Impactos</a>
+        
     </section>
 
     <!-- Footer -->
@@ -84,6 +102,8 @@
                 }
             });
         });
+
+      
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

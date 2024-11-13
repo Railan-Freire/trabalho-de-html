@@ -7,6 +7,7 @@
     <title>Fumaça no Acre</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/estilo.css">
+    <title></title>
 </head>
 <body>
 
@@ -19,14 +20,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#problema">O Problema</a>
+                    <a href="index.html" class="nav-link" id="problema-link">PROBLEMA</a>
+                </li>
+                <li class="nav-item">
+                    <a href="impactos.html" class="nav-link" id="impactos-link">IMPACTOS</a>
+                </li>
+                <li class="nav-item">
+                    <a href="causas.html" class="nav-link" id="causas-link">CAUSAS</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Banner Parallax -->
-    <div class="parallax-banner">
+    <div class="parallax-banner" style="background-image: url('https://agencia.ac.gov.br/wp-content/uploads/2024/09/Imagem-do-WhatsApp-de-2024-09-03-as-08.07.48_3552bc63-scaled.jpg');">
         <div class="banner-text">
             <h1>Fumaça no Acre</h1>
             <p>Uma visão clara sobre a poluição atmosférica causada pelas queimadas.</p>
@@ -44,7 +51,7 @@
         <p>Além dos danos à saúde, a situação também afeta a economia local, com interrupções no transporte aéreo e prejuízos para agricultores. A destruição das florestas prejudica a biodiversidade e contribui para o aquecimento global.
 
             As autoridades pedem que a população evite qualquer tipo de queimada e denuncie atividades ilegais. Conscientizar sobre os impactos dessas ações é essencial para proteger a Amazônia e melhorar a qualidade de vida no estado.</p>
-            <a href="causas.html">Causas</a>
+       
     </section>
     
     <!-- Footer -->
@@ -68,10 +75,19 @@
                 });
             });
         });
+
+        // Destaca o link do navbar da página ativa
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html
+</html>

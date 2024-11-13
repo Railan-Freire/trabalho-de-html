@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Impactos das queimadas no estado do Acre.">
-    <title>Impactos das Queimadas no Acre</title>
+    <meta name="description" content="Informações sobre os impactos das queimadas no Acre.">
+    <title>Fumaça no Acre</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/estilo.css">
 </head>
@@ -19,13 +19,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">O Problema</a>
+                    <a class="nav-link" href="index.html">PROBLEMA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="causas.html">Causas</a>
+                    <a class="nav-link" href="impactos.html">IMPACTOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Impactos</a>
+                    <a class="nav-link" href="causas.html">CAUSAS</a>
                 </li>
             </ul>
         </div>
@@ -57,16 +57,16 @@
         <h3>Impactos no Meio Ambiente</h3>
         <p>Os efeitos da fumaça vão além da saúde humana e afetam diretamente o meio ambiente, com implicações significativas para a biodiversidade da Amazônia:</p>
         <ul>
-            <li><strong>Perda de Biodiversidade:</strong> As queimadas resultam na destruição de habitats naturais, ameaçando espécies de flora e fauna nativas. A perda de biodiversidade pode comprometer ecossistemas inteiros, prejudicando o equilíbrio ambiental.</li>
-            <li><strong>Alterações Climáticas:</strong> A fumaça e o desmatamento contribuem para o aumento das emissões de gases de efeito estufa, exacerbando as mudanças climáticas. Isso afeta não apenas o Acre, mas tem repercussões globais.</li>
-            <li><strong>Contaminação do Solo e Água:</strong> A queima de biomassa libera substâncias tóxicas que podem se infiltrar no solo e contaminar os recursos hídricos, afetando a qualidade da água disponível para consumo e irrigação.</li>
+            <li><strong>Perda de Biodiversidade:</strong> As queimadas resultam na destruição de habitats naturais, ameaçando espécies de flora e fauna nativas.</li>
+            <li><strong>Alterações Climáticas:</strong> A fumaça e o desmatamento contribuem para o aumento das emissões de gases de efeito estufa, exacerbando as mudanças climáticas.</li>
+            <li><strong>Contaminação do Solo e Água:</strong> A queima de biomassa libera substâncias tóxicas que podem se infiltrar no solo e contaminar os recursos hídricos.</li>
         </ul>
 
         <h3>Impactos Econômicos</h3>
         <p>A crise da fumaça também traz consequências econômicas, afetando o cotidiano dos moradores:</p>
         <ul>
-            <li><strong>Agricultura Comprometida:</strong> Os agricultores enfrentam dificuldades devido à baixa visibilidade e ao risco de danos às suas plantações. Isso pode levar a perdas financeiras significativas e insegurança alimentar.</li>
-            <li><strong>Turismo Prejudicado:</strong> A imagem da região e a saúde de suas atrações turísticas ficam comprometidas, desencorajando visitantes e impactando a economia local.</li>
+            <li><strong>Agricultura Comprometida:</strong> Os agricultores enfrentam dificuldades devido à baixa visibilidade e ao risco de danos às suas plantações.</li>
+            <li><strong>Turismo Prejudicado:</strong> A imagem da região e a saúde de suas atrações turísticas ficam comprometidas.</li>
         </ul>
     </section>
 
@@ -77,19 +77,16 @@
 
     <!-- JavaScript -->
     <script>
-        // Alerta de conscientização ao carregar a página
-        window.onload = function() {
-            alert("A situação das queimadas no Acre é crítica. Conscientize-se e ajude a preservar o meio ambiente.");
-        };
+       
+        ;
 
-        // Rolagem suave para links internos
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Destaca o link do navbar da página ativa
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
         });
     </script>
 
